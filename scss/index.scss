@@ -1,0 +1,425 @@
+@charset "utf-8";
+@import "reset";
+
+
+$pc: 1024px; // PC
+$tab: 768px; // タブレット
+$sp: 560px;  // スマホ
+$sp-second: 425px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin sp-second {
+    @media (max-width: ($sp-second)) {
+      @content;
+    }
+  }
+
+ 
+html{
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+
+  .mainvisual{
+    background-image: url(../img/mainvisual.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 340px;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 114px;
+
+    @include pc{
+        width: 95%;
+        height: 37vw;
+        background-size: cover;
+    }
+
+    @include tab{
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+
+    @include sp{
+        height: 40vw;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+
+    @include sp-second(){
+        height: 60vw;
+    }
+
+      .mv_inner_text{
+        color: white;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform : translate(-50%,-50%);
+        transform : translate(-50%,-50%);
+
+        @include pc{
+            width: 100%;
+        }
+
+        .top_inner_title{
+          font-weight: 900;
+          font-size: 74px;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 900;
+
+          @include pc{
+            font-size: 7vw;
+          }/*pc*/
+
+          @include sp{
+            font-size: 9vw;
+          }
+
+        }/*inner_title*/
+
+    }    
+
+  }/*mainvisual*/
+
+
+  .content{
+      margin-bottom: 114px;
+
+      @include sp{
+          margin-bottom: 60px;
+      }
+
+      &_wrapper{
+          max-width: 900px;
+          width: 100%;
+          margin: 0 auto;
+
+          .menu_tab{
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+            margin-top: 42px;
+    
+            @include pc{
+                justify-content: center;
+                width: 92%;
+            }
+    
+            @include tab{
+                width: 90%;
+                display: block;
+                margin: 0 auto;
+            }
+    
+             @include pc{
+            }
+    
+            li{
+              list-style: none;
+              background-color: #000000;
+              border-radius: 4px;
+              text-align:center;
+              position: relative;
+              cursor: pointer;
+              padding: 21px 0 20px;
+              width: 292px;
+              margin: 0 7px;
+    
+                @include pc{
+                    width:32.5%;
+                }
+    
+              @include tab{
+                margin: 0 auto;
+                margin-bottom: 15px;
+                width: 97%;
+              }
+
+
+              @include sp{
+                margin-bottom: 8px;
+              }
+            
+            
+    
+                p{
+                    font-size: 22px;
+                    line-height: 22px;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 800;
+                    color: white;
+                    letter-spacing: 0.55px;
+
+                    @include pc{
+                        font-size: 2.2vw;
+                    }
+
+                    @include tab{
+                        font-size: 2.7vw;
+                    }
+    
+                    @include sp-second{
+                        font-size:12px;
+                        letter-spacing: initial;
+                    }
+
+                    span{
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin-left: 10px;
+                        letter-spacing: 0.375px;
+                    }/*span*/
+    
+                }/*p*/
+              
+            }/*logo-item*/
+
+            li:hover{
+                opacity: 0.8;
+            }
+    
+            .select{
+              transition: all 0.2s ease-out;
+              background-color: #F0F0F0;
+    
+              p{
+                color: #000000;
+              }/*p*/
+          }
+    
+        }/*menu_tab*/
+
+        .menu_wrap{
+
+            .title-part{
+                text-align: center;
+                margin-bottom: 60px;
+                margin-top: 82px;
+                
+
+                h2{
+                    font-size: 52px;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 900;
+                    -webkit-text-stroke: 1px #000;
+                    color: transparent;
+                    letter-spacing: 1.3px;
+
+                    @include sp{
+                        font-size: 40px;
+                    }
+
+                    @include sp-second(){
+                        font-size: 35px;
+                    }
+
+
+                    .sub-h2{
+                        font-size: 18px;
+                        display: block;
+                        color: black;
+                        -webkit-text-stroke: none;
+                        letter-spacing: 0.045px;
+                    }/*subb-h2*/
+                }/*h2*/
+
+                .top_text{
+                    font-size: 14px;
+                    margin-top: 34px;
+                    line-height: 1.7;
+
+                    .sp_br{
+                        display: none;
+                        @include tab{
+                            display: initial;
+                        }
+                    }/*br*/
+                }
+            }/*title-part*/
+
+
+
+            .menu{
+                width: 100%;
+                max-width: 900px;
+
+                .menu_item{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;      
+                    
+                    @include pc{
+                        justify-content: center;
+                    }
+
+                    @include sp{
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    li{
+                        width: 432px;
+                        list-style: none;
+                        margin-bottom: 41px;
+
+                        @include pc{
+                            width: 42vw;
+                            margin-right: 8px;
+                            margin-left: 8px;
+                        }
+
+                        @include sp{
+                            margin:  0 auto;
+                            width: 85vw;
+                            padding-bottom: 50px;
+                        }
+
+                        @include sp-second(){
+                            width: 80vw;
+                        }
+
+
+                        img{
+                            padding-bottom: 13px;
+
+                            @include pc{
+                                width: 42vw;
+                            }
+
+                            @include sp{
+                                width: 85vw;
+                            }
+
+                            @include sp-second(){
+                                width: 80vw;
+                            }
+
+                        }
+
+                        .menu_name{
+                            font-size: 20px;
+                            font-weight: bold;
+                            letter-spacing: 0.5px;
+
+                            @include tab{
+                                font-size: 16px;
+                            }
+                        }/*h2*/
+
+                        .menu_price{
+                            font-size: 20px;
+                            letter-spacing: 0.5px;
+                            padding-bottom: 16.2px;
+                            font-weight: bold;
+                            border-bottom: 1px solid #B2B2B2;
+
+
+                            @include tab{
+                                font-size: 14px;
+                            }
+
+                        }
+
+                        .menu_text{
+                            padding-top: 15.8px;
+                            line-height: 2;
+                            font-size: 13px;
+                        }
+                    }
+                }/*item*/
+            }/*menu*/
+
+
+
+        }/*menu_wrap*/
+
+
+          .btn{
+              width: 100%;
+
+              @include pc{
+                  width: 87.8vw;
+                  margin: 0 auto;
+              }
+
+              @include tab{
+                width: 85vw;
+            }
+
+            @include sp-second(){
+                width: 80vw;
+            }
+
+
+              .tel{
+                  display: block;
+                  font-size: 20px;
+                  background-color: #000000;
+                  padding: 24px 0;
+                  color: white;
+                  text-align: center;
+
+                  @include sp(){
+                    font-size: 14px;
+                    padding: 14px 0;
+                }
+
+
+
+
+                  .tel_number{
+                      font-size: 39px;
+                      margin-left: 17px;
+
+                      @include tab{
+                          font-size: 30px;
+                      }
+
+                      @include sp(){
+                        font-size: 30px;
+                        display: block;
+                    }
+
+                    @include sp-second(){
+                        font-size: 22px;
+                    }
+
+
+                  }/*number*/
+
+              }/*tel*/
+          }/*btn*/
+
+          .btn:hover{
+              opacity: 0.7;
+          }
+      }/*wrapper*/
+  }/*content*/
+
+
+
+
+}/*body*/
+}
