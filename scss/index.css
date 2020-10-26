@@ -660,6 +660,7 @@ html body .content_wrapper .menu_wrap .menu .menu_item li {
 @media (max-width: 425px) {
   html body .content_wrapper .menu_wrap .menu .menu_item li {
     width: 80vw;
+    padding-bottom: 35px;
   }
 }
 
