@@ -382,6 +382,7 @@ html body .mainvisual .mv_inner_text {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 100%;
   /*inner_title*/
 }
 
@@ -396,6 +397,7 @@ html body .mainvisual .mv_inner_text .top_inner_title {
   font-size: 74px;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
+  letter-spacing: 1.85px;
   /*pc*/
 }
 
@@ -436,8 +438,9 @@ html body .content_wrapper .menu_tab {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 42px;
   /*logo-item*/
 }
@@ -468,13 +471,13 @@ html body .content_wrapper .menu_tab li {
   cursor: pointer;
   padding: 21px 0 20px;
   width: 292px;
-  margin: 0 7px;
   /*p*/
 }
 
 @media (max-width: 1024px) {
   html body .content_wrapper .menu_tab li {
     width: 32.5%;
+    margin: 0 7px;
   }
 }
 
@@ -526,6 +529,7 @@ html body .content_wrapper .menu_tab li p span {
   font-weight: bold;
   margin-left: 10px;
   letter-spacing: 0.375px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 html body .content_wrapper .menu_tab li:hover {
@@ -583,6 +587,7 @@ html body .content_wrapper .menu_wrap .title-part h2 .sub-h2 {
   color: black;
   -webkit-text-stroke: none;
   letter-spacing: 0.045px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 html body .content_wrapper .menu_wrap .title-part .top_text {
@@ -704,6 +709,7 @@ html body .content_wrapper .menu_wrap .menu .menu_item li .menu_price {
   padding-bottom: 16.2px;
   font-weight: bold;
   border-bottom: 1px solid #B2B2B2;
+  font-family: 'Raleway', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -716,6 +722,11 @@ html body .content_wrapper .menu_wrap .menu .menu_item li .menu_text {
   padding-top: 15.8px;
   line-height: 2;
   font-size: 13px;
+  /*box_amount*/
+}
+
+html body .content_wrapper .menu_wrap .menu .menu_item li .menu_text .box_amount {
+  display: block;
 }
 
 html body .content_wrapper .btn {
@@ -762,11 +773,15 @@ html body .content_wrapper .btn .tel {
 html body .content_wrapper .btn .tel .tel_number {
   font-size: 39px;
   margin-left: 17px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  vertical-align: -7px;
 }
 
 @media (max-width: 768px) {
   html body .content_wrapper .btn .tel .tel_number {
     font-size: 30px;
+    vertical-align: -5px;
   }
 }
 
@@ -774,6 +789,8 @@ html body .content_wrapper .btn .tel .tel_number {
   html body .content_wrapper .btn .tel .tel_number {
     font-size: 30px;
     display: block;
+    vertical-align: none;
+    margin-left: 0px;
   }
 }
 

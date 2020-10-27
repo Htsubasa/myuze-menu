@@ -78,6 +78,7 @@ body{
         left: 50%;
         -webkit-transform : translate(-50%,-50%);
         transform : translate(-50%,-50%);
+        width: 100%;
 
         @include pc{
             width: 100%;
@@ -88,6 +89,7 @@ body{
           font-size: 74px;
           font-family: 'Raleway', sans-serif;
           font-weight: 900;
+          letter-spacing: 1.85px;
 
           @include pc{
             font-size: 7vw;
@@ -119,7 +121,7 @@ body{
           .menu_tab{
             display: flex;
             margin: 0 auto;
-            justify-content: space-around;
+            justify-content: space-between;
             margin-top: 42px;
     
             @include pc{
@@ -145,10 +147,10 @@ body{
               cursor: pointer;
               padding: 21px 0 20px;
               width: 292px;
-              margin: 0 7px;
     
                 @include pc{
                     width:32.5%;
+                    margin: 0 7px;
                 }
     
               @include tab{
@@ -190,6 +192,7 @@ body{
                         font-weight: bold;
                         margin-left: 10px;
                         letter-spacing: 0.375px;
+                        font-family: 'Noto Sans JP', sans-serif;
                     }/*span*/
     
                 }/*p*/
@@ -242,6 +245,7 @@ body{
                         color: black;
                         -webkit-text-stroke: none;
                         letter-spacing: 0.045px;
+                        font-family: 'Noto Sans JP', sans-serif;
                     }/*subb-h2*/
                 }/*h2*/
 
@@ -335,6 +339,7 @@ body{
                             padding-bottom: 16.2px;
                             font-weight: bold;
                             border-bottom: 1px solid #B2B2B2;
+                            font-family: 'Raleway', sans-serif;
 
 
                             @include tab{
@@ -347,6 +352,10 @@ body{
                             padding-top: 15.8px;
                             line-height: 2;
                             font-size: 13px;
+
+                            .box_amount{
+                                display: block;
+                            }/*box_amount*/
                         }
                     }
                 }/*item*/
@@ -393,14 +402,20 @@ body{
                   .tel_number{
                       font-size: 39px;
                       margin-left: 17px;
+                      font-family: 'Oswald', sans-serif;
+                      font-weight: 500;
+                      vertical-align: -7px;
 
                       @include tab{
                           font-size: 30px;
+                          vertical-align: -5px;
                       }
 
                       @include sp(){
                         font-size: 30px;
                         display: block;
+                        vertical-align: none;
+                        margin-left: 0px;
                     }
 
                     @include sp-second(){
